@@ -371,14 +371,14 @@ We propose a new method called LaCIM that specifies the underlying causal struct
 <p align="justify" style=font-size:16px> Conventional supervised learning methods, especially deep ones, are found to be sensitive to out-of-distribution (OOD) examples, largely because the learned representation mixes the semantic factor with the variation factor due to their domain-specific correlation, while only the semantic factor causes the output. To address the problem, we propose a Causal Semantic Generative model (CSG) based on causal reasoning so that the two factors are modeled separately, and develop methods for OOD prediction from a single training domain, which is common and challenging. The methods are based on the causal invariance principle, with a novel design in variational Bayes for both efficient learning and easy prediction. Theoretically, we prove that under certain conditions, CSG can identify the semantic factor by fitting training data, and this semantic identification guarantees the boundedness of OOD generalization error and the success of adaptation. </p> 
 </li> 
 </ul>
-</ul>
+<ul>
 <p style=font-size:18px class="text-left"> (5) Bilateral Asymmetry Guided Counterfactual Generating Network for Mammogram Classification. <b>(TIP)</b>, 2021.</p></a> <br />
 <img src="picture/counterfactual_result.png" alt="alt text" width="800px" /><br />
 <br/>
 <p align="justify" style=font-size:16px> Mammogram benign or malignant classification with only image-level labels is challenging due to the absence of lesion annotations. Motivated by the symmetric prior that the lesions on one side of breasts rarely appear in the corresponding areas on the other side, we explore to answer a counterfactual question to identify the lesion areas. This counterfactual question means: given an image with lesions, how would the features have behaved if there were no lesions in the image? To answer this question, we derive a new theoretical result based on the symmetric prior. Specifically, by building a causal model that entails such a prior for bilateral images, we identify to optimize the distances in distribution between i) the counterfactual features and the target side’s features in lesion-free areas; and ii) the counterfactual features and the reference side’s features in lesion areas. To realize these optimizations for better benign/malignant classification, we propose a counterfactual generative network, which is mainly composed of a Generator Adversarial Network and a prediction feedback mechanism, they are optimized jointly and prompt each other.  </p> 
 </li> 
 </ul>
-<ul>
+</ul>
 <div id="footer-text">
 <br>Page generated 2023-06-18, by <a href="https://sunxinwei0625.github.io/sunxw.github.io/">Xinwei Sun</a>.
 </div>
