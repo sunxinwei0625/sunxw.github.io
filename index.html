@@ -176,7 +176,7 @@ Chengming Xu*, Chen Liu*, <b>Xinwei Sun#</b>, Siqian Yang, Yabiao Wang, Chengjie
 </li>
 </ul>
 <ul>
-<li><p style=font-size:18px><a href="https://ieeexplore.ieee.org/abstract/document/9540781">Bilateral Asymmetry Guided Counterfactual Generating Network for Mammogram Classification</a> <br />
+<li><p style=font-size:18px><a href="https://ieeexplore.ieee.org/abstract/document/9540781">Bilateral Asymmetry Guided Counterfactual Generating Network for Mammogram Classification.</a> <br />
 Churan Wang*, Jing Li*, Fandong Zhang, <b>Xinwei Sun#</b>, Hao Dong, Yizhou Wang#. <br />
 <i>IEEE Transactions on Image Processing <b>(IEEE TIP)</b>, 2021. </p> 
 </li>
@@ -367,79 +367,18 @@ We propose a new method called LaCIM that specifies the underlying causal struct
 <ul>
 <p style=font-size:18px class="text-left"> (4) Learning Causal Semantic Representation for Out-of-Distribution Prediction. <b>(NeurIPS)</b>, 2021.</p></a> <br />
 <img src="picture/causal_semantic_ood.png" alt="alt text" width="800px" /><br />
-<br />
+<br/>
 <p align="justify" style=font-size:16px> Conventional supervised learning methods, especially deep ones, are found to be sensitive to out-of-distribution (OOD) examples, largely because the learned representation mixes the semantic factor with the variation factor due to their domain-specific correlation, while only the semantic factor causes the output. To address the problem, we propose a Causal Semantic Generative model (CSG) based on causal reasoning so that the two factors are modeled separately, and develop methods for OOD prediction from a single training domain, which is common and challenging. The methods are based on the causal invariance principle, with a novel design in variational Bayes for both efficient learning and easy prediction. Theoretically, we prove that under certain conditions, CSG can identify the semantic factor by fitting training data, and this semantic identification guarantees the boundedness of OOD generalization error and the success of adaptation. </p> 
 </li> 
 </ul>
-<ul>
+</ul>
+<p style=font-size:18px class="text-left"> (5) Bilateral Asymmetry Guided Counterfactual Generating Network for Mammogram Classification. <b>(TIP)</b>, 2021.</p></a> <br />
+<img src="picture/counterfactual_result.png" alt="alt text" width="800px" /><br />
 <br/>
-<p style=font-size:20px> 3. Applications (NeuroImaging and Machine Learning).
-<ul>
-<p style=font-size:18px class="text-left"> (1) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
-<img src="picture/AD_GSplit.png" alt="alt text" width="800px" /> <br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> In voxel-based neuroimage analysis, lesion features have been the main focus in disease prediction due to their interpretability with respect to related diseases. However, we observe that there exists another type of features introduced during the preprocessing steps and we call them “Procedural Bias”. Besides, such bias can be leveraged to improve classification accuracy. Nevertheless, most existing models
-suffer from either under-fit without considering procedural bias or poor interpretability without differentiating such bias from lesion ones. In this
-paper, a novel dual-task algorithm namely GSplit LBI is proposed to
-resolve this problem. By introducing an augmented variable enforced
-to be structural sparsity with a variable splitting term, the estimators
-for prediction and selecting lesion features can be optimized separately
-and mutually monitored by each other following an iterative scheme.
-Empirical experiments have been evaluated on Alzheimer’s Disease
-Neuroimaging Initiative (ADNI) database. </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (2) FDR-HS: An Empirical Bayesian Identification of Heterogenous Features in Neuroimage Analysis. <b>(MICCAI)</b>, 2018.</p></a> <br />
-<img src="picture/fdrhs_b.png" alt="alt text" width="800px" /> <br />
-<br />
-<p align="justify" style=font-size:16px> Recent studies found that in voxel-based neuroimage analysis,
-detecting and differentiating procedural bias" that is introduced
-during the preprocessing steps from lesion features, not only help
-boost accuracy but also can improve interpretability. To capture both procedural bias and lesion features, we propose
-a two-group" Empirical-Bayes method called FDR-HS (False-
-Discovery-Rate Heterogenous Smoothing). Such a method is able to not
-only avoid multicollinearity but also exploit the heterogenous spatial
-patterns of features. In addition, it enjoys simplicity in implementation
-by introducing hidden variables, which turns the problem into a convex
-optimization scheme and can be solved efficiently by the expectation maximization
-(EM) algorithm.  </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (3) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
-<img src="picture/dessilbi.png" alt="alt text" width="800px" /> <br />
-<br />
-<p align="justify" style=font-size:16px> Over-parameterization is ubiquitous nowadays in
-training neural networks to benefit both optimizations
-in seeking global optima and generalization
-in reducing prediction error. We propose a new
-approach based on differential inclusions of inverse
-scale-spaces. Specifically, it generates a
-family of models from simple to complex ones
-that couples a pair of parameters simultaneously
-train over-parameterized deep models and
-structural sparsity on weights of fully connected
-and convolutional layers. Such a differential inclusion
-the scheme has a simple discretization, proposed
-as Deep structurally splitting Linearized
-Bregman Iteration (DessiLBI), whose global convergence
-analysis in deep learning is established
-that from any initializations, algorithmic iterations
-converge to a critical point of empirical risks. Experimental
-evidence shows that DessiLBI achieve
-comparable and even better performance than
-the competitive optimizers in exploring the structural
-the sparsity of several widely used backbones on
-the benchmark datasets. Remarkably, with early
-stopping, DessiLBI unveils “winning tickets” in
-early epochs: the effective sparse structure with
-comparable test accuracy to fully trained overparameterized
-models. </p> 
+<p align="justify" style=font-size:16px> Mammogram benign or malignant classification with only image-level labels is challenging due to the absence of lesion annotations. Motivated by the symmetric prior that the lesions on one side of breasts rarely appear in the corresponding areas on the other side, we explore to answer a counterfactual question to identify the lesion areas. This counterfactual question means: given an image with lesions, how would the features have behaved if there were no lesions in the image? To answer this question, we derive a new theoretical result based on the symmetric prior. Specifically, by building a causal model that entails such a prior for bilateral images, we identify to optimize the distances in distribution between i) the counterfactual features and the target side’s features in lesion-free areas; and ii) the counterfactual features and the reference side’s features in lesion areas. To realize these optimizations for better benign/malignant classification, we propose a counterfactual generative network, which is mainly composed of a Generator Adversarial Network and a prediction feedback mechanism, they are optimized jointly and prompt each other.  </p> 
 </li> 
 </ul>
-</ul>
+<ul>
 <div id="footer-text">
 <br>Page generated 2023-06-18, by <a href="https://sunxinwei0625.github.io/sunxw.github.io/">Xinwei Sun</a>.
 </div>
