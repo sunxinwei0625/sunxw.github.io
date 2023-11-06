@@ -285,26 +285,7 @@ Qianqian Xu, Jiechao Xiong, <b>Xinwei Sun</b>, Zhiyong Yang, Xiaochun Cao, Qingm
 </li> 
 </ul>
 <ul>
-<p style=font-size:20px> 2. Causal Inference and Learning. 
-<ul>
-<p style=font-size:18px class="text-left"> (1) Causal Discovery from Subsampled Time Series with Proxy Variables. <b>(NeurIPS)</b>, 2023.</p></a> <br />
-<img src="picture/AD_causal_discovery.png" alt="alt text" width="800px" /><br />
-<br />
-<br />
-<p align="justify" style=font-size:16px>  Inferring causal structures from time series data is the central interest of many scientific inquiries. We propose a constraint-based algorithm that can identify the entire causal structure from subsampled time series, without any parametric constraint. Our observation is that the challenge of subsampling arises mainly from hidden variables at the unobserved time steps. Meanwhile, every hidden variable has an observed proxy, which is essentially itself at some observable time in the future, benefiting from the temporal structure. Based on these, we can leverage the proxies to remove the bias induced by the hidden variables and hence achieve identifiability. Following this intuition, we propose a proxy-based causal discovery algorithm.  </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (2) Which Invariance should we Transfer? A Causal Minimax Learning Approach. <b>(ICML)</b>, 2023.</p></a> <br />
-<img src="picture/causal_minimax.png" alt="alt text" width="800px" /><br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> A major barrier to deploying current machine learning models lies in their non-reliability to dataset shifts. Despite recent advances, a key question remains: which subset of this whole stable information should the model transfer, in order to achieve optimal generalization ability? To answer this question, we present a comprehensive minimax analysis from a causal perspective. Specifically, we first provide a graphical condition for the whole stable set to be optimal. When this condition fails, we surprisingly find with an example that this whole stable set, although can fully exploit stable information, is not the optimal one to transfer. To identify the optimal subset under this case, we propose to estimate the worst-case risk with a novel \emph{optimization} scheme over the intervention functions on mutable causal mechanisms. We then propose an efficient algorithm to search for the subset with minimal worst-case risk, based on a newly defined equivalence relation between stable subsets.   </p> 
-</li> 
-</ul> 
-<p style=font-size:20px> 3. Applications (NeuroImaging and Machine Learning).
-<ul>
-<p style=font-size:18px class="text-left"> (1) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
+<p style=font-size:18px class="text-left"> (4) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
 <img src="picture/AD_GSplit.png" alt="alt text" width="800px" /> <br />
 <br />
 <br />
@@ -320,7 +301,7 @@ Neuroimaging Initiative (ADNI) database. </p>
 </li> 
 </ul> 
 <ul>
-<p style=font-size:18px class="text-left"> (2) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
+<p style=font-size:18px class="text-left"> (5) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
 <img src="picture/dessilbi.png" alt="alt text" width="800px" /> <br />
 <br />
 <br />
@@ -353,6 +334,40 @@ models. </p>
 </li> 
 </ul>
 </ul>
+<p style=font-size:20px> 2. Causal Inference and Learning. 
+<ul>
+<p style=font-size:18px class="text-left"> (1) Causal Discovery from Subsampled Time Series with Proxy Variables. <b>(NeurIPS)</b>, 2023.</p></a> <br />
+<img src="picture/AD_causal_discovery.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px>  Inferring causal structures from time series data is the central interest of many scientific inquiries. We propose a constraint-based algorithm that can identify the entire causal structure from subsampled time series, without any parametric constraint. Our observation is that the challenge of subsampling arises mainly from hidden variables at the unobserved time steps. Meanwhile, every hidden variable has an observed proxy, which is essentially itself at some observable time in the future, benefiting from the temporal structure. Based on these, we can leverage the proxies to remove the bias induced by the hidden variables and hence achieve identifiability. Following this intuition, we propose a proxy-based causal discovery algorithm.  </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (2) Which Invariance should we Transfer? A Causal Minimax Learning Approach. <b>(ICML)</b>, 2023.</p></a> <br />
+<img src="picture/causal_minimax.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> A major barrier to deploying current machine learning models lies in their non-reliability to dataset shifts. Despite recent advances, a key question remains: which subset of this whole stable information should the model transfer, in order to achieve optimal generalization ability? To answer this question, we present a comprehensive minimax analysis from a causal perspective. Specifically, we first provide a graphical condition for the whole stable set to be optimal. When this condition fails, we surprisingly find with an example that this whole stable set, although can fully exploit stable information, is not the optimal one to transfer. To identify the optimal subset under this case, we propose to estimate the worst-case risk with a novel \emph{optimization} scheme over the intervention functions on mutable causal mechanisms. We then propose an efficient algorithm to search for the subset with minimal worst-case risk, based on a newly defined equivalence relation between stable subsets.   </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (3) Recovering Latent Causal Factor for Generalization to Distributional Shifts. <b>(NeurIPS)</b>, 2021.</p></a> <br />
+<img src="picture/lacim.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px>  Distributional shifts between training and target domains may degrade the prediction accuracy of learned models, mainly because these models often learn features that possess only correlation rather than causal relation with the output. 
+We propose a new method called LaCIM that specifies the underlying causal structure of the data and the source of distributional shifts, guiding us to pursue only causal factor for prediction. Specifically, the LaCIM introduces a pair of correlated latent factors: (a) causal factor and (b) others, while the extent of this correlation is governed by a domain variable that characterizes the distributional shifts. On the basis of this, we prove that the distribution of observed variables conditioning on latent variables is shift-invariant. Equipped with such an invariance, we prove that the causal factor can be recovered without mixing information from others, which induces the ground-truth predicting mechanism. We propose a Variational-Bayesian-based method to learn this invariance for prediction. </p> 
+</li> 
+</ul>
+<p style=font-size:18px class="text-left"> (4) Learning Causal Semantic Representation for Out-of-Distribution Prediction. <b>(NeurIPS)</b>, 2021.</p></a> <br />
+<img src="picture/causal_semantic_ood.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> Conventional supervised learning methods, especially deep ones, are found to be sensitive to out-of-distribution (OOD) examples, largely because the learned representation mixes the semantic factor with the variation factor due to their domain-specific correlation, while only the semantic factor causes the output. To address the problem, we propose a Causal Semantic Generative model (CSG) based on causal reasoning so that the two factors are modeled separately, and develop methods for OOD prediction from a single training domain, which is common and challenging. The methods are based on the causal invariance principle, with a novel design in variational Bayes for both efficient learning and easy prediction. Theoretically, we prove that under certain conditions, CSG can identify the semantic factor by fitting training data, and this semantic identification guarantees the boundedness of OOD generalization error and the success of adaptation. </p> 
+</li> 
+</ul>
+<ul>
 <div id="footer-text">
 <br>Page generated 2023-06-18, by <a href="https://sunxinwei0625.github.io/sunxw.github.io/">Xinwei Sun</a>.
 </div>
