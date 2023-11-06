@@ -31,6 +31,107 @@ Email: sunxinwei@fudan.edu.cn <br />
 <p style=font-size:20px> 2023 Spring,  Advanced Statistical Theory</a>.</p>
 <p style=font-size:20px> 2023 Spring,  Mathematical Statistics</a>.</p>
 <p style=font-size:20px> 2022 Fall,  Advanced Regression Analysis</a>.</p>
+
+<h2>Research</h2>
+<ul>
+<p style=font-size:20px> 1. Sparsity Learning and Statistical Inference.
+<ul>
+<p style=font-size:18px class="text-left"> (1) Controlling the False Discovery Rate in Transformational Sparsity: Split Knockoffs. <b>(JRSSB)</b>, 2023.</p></a> <br />
+<img src="picture/split_simulation.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> Controlling the False Discovery Rate (FDR) in a variable selection procedure is critical for reproducible discoveries, and it has been extensively studied in sparse linear models. However, it remains largely open in scenarios where the sparsity constraint is not directly imposed on the parameters but on a linear transformation of the parameters to be estimated. In this paper, we propose a data-adaptive FDR control method, called the \emph{Split Knockoff} method, for this transformational sparsity setting. The proposed method exploits both variable and data splitting. The linear transformation constraint is relaxed to its Euclidean proximity in a lifted parameter space, which yields an orthogonal design that enables the orthogonal Split Knockoff construction. To overcome the challenge that exchangeability fails due to the heterogeneous noise brought by the transformation, new inverse supermartingale structures are developed via data splitting for provable FDR control without sacrificing power. </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (2) Split Knockoffs for Multiple Comparisons: Controlling the Directional False Discovery Rate. <b>(JASA)</b>, 2023.</p></a> <br />
+<img src="picture/knockoff_sign_procedure.png" alt="alt text" width="800px" /> <br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> Multiple comparisons in hypothesis testing often encounter structural constraints in various applications. We propose an extended Split Knockoff method specifically designed to address the control of directional false discovery rate under linear transformations. Our proposed approach relaxes the stringent linear manifold constraint to its neighborhood, employing a variable splitting technique commonly used in optimization. This methodology yields an orthogonal design that benefits both power and directional false discovery rate control. By incorporating a sample splitting scheme, we achieve effective control of the directional false discovery rate, with a notable reduction to zero as the relaxed neighborhood expands. </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (3) Boosting with Structural Sparsity: A Differential Inclusion Approach. <b>(ACHA)</b>, 2020.</p></a> <br />
+<img src="picture/Split_theory.png" alt="alt text" width="800px" /> <br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> Boosting as gradient descent algorithms is one popular method in machine learning. We propose a novel Boosting-type algorithm based on restricted gradient descent with structural sparsity control whose underlying dynamics are governed by differential inclusions. We present an iterative regularization path with structural sparsity where the parameter is sparse under some linear transforms, based on variable splitting and the Linearized Bregman Iteration. Hence it is called Split LBI. Despite its simplicity, Split LBI outperforms the popular generalized Lasso in both theory and experiments. A theory of path consistency is presented that equipped with a proper early stopping, Split LBI may achieve model selection consistency under a family of Irrepresentable Conditions which can be weaker than the necessary and sufficient condition for generalized Lasso. Furthermore, some 
+\ell_2 error bounds are also given at the minimax optimal rates. </p> 
+</li> 
+</ul>
+<p style=font-size:20px> 2. Causal Inference and Learning. 
+<ul>
+<p style=font-size:18px class="text-left"> (1) Causal Discovery from Subsampled Time Series with Proxy Variables. <b>(NeurIPS)</b>, 2023.</p></a> <br />
+<img src="picture/AD_causal_discovery.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px>  Inferring causal structures from time series data is the central interest of many scientific inquiries. We propose a constraint-based algorithm that can identify the entire causal structure from subsampled time series, without any parametric constraint. Our observation is that the challenge of subsampling arises mainly from hidden variables at the unobserved time steps. Meanwhile, every hidden variable has an observed proxy, which is essentially itself at some observable time in the future, benefiting from the temporal structure. Based on these, we can leverage the proxies to remove the bias induced by the hidden variables and hence achieve identifiability. Following this intuition, we propose a proxy-based causal discovery algorithm.  </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (2) Which Invariance should we Transfer? A Causal Minimax Learning Approach. <b>(ICML)</b>, 2023.</p></a> <br />
+<img src="picture/causal_minimax.png" alt="alt text" width="800px" /><br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> A major barrier to deploying current machine learning models lies in their non-reliability to dataset shifts. Despite recent advances, a key question remains: which subset of this whole stable information should the model transfer, in order to achieve optimal generalization ability? To answer this question, we present a comprehensive minimax analysis from a causal perspective. Specifically, we first provide a graphical condition for the whole stable set to be optimal. When this condition fails, we surprisingly find with an example that this whole stable set, although can fully exploit stable information, is not the optimal one to transfer. To identify the optimal subset under this case, we propose to estimate the worst-case risk with a novel \emph{optimization} scheme over the intervention functions on mutable causal mechanisms. We then propose an efficient algorithm to search for the subset with minimal worst-case risk, based on a newly defined equivalence relation between stable subsets.   </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:20px> 3. Applications (NeuroImaging and Machine Learning).
+<ul>
+<p style=font-size:18px class="text-left"> (1) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
+<img src="picture/AD_GSplit.png" alt="alt text" width="800px" /> <br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> In voxel-based neuroimage analysis, lesion features have been the main focus in disease prediction due to their interpretability with respect to related diseases. However, we observe that there exists another type of features introduced during the preprocessing steps and we call them “Procedural Bias”. Besides, such bias can be leveraged to improve classification accuracy. Nevertheless, most existing models
+suffer from either under-fit without considering procedural bias or poor interpretability without differentiating such bias from lesion ones. In this
+paper, a novel dual-task algorithm namely GSplit LBI is proposed to
+resolve this problem. By introducing an augmented variable enforced
+to be structural sparsity with a variable splitting term, the estimators
+for prediction and selecting lesion features can be optimized separately
+and mutually monitored by each other following an iterative scheme.
+Empirical experiments have been evaluated on Alzheimer’s Disease
+Neuroimaging Initiative (ADNI) database. </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (2) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
+<img src="picture/dessilbi.png" alt="alt text" width="800px" /> <br />
+<br />
+<br />
+<p align="justify" style=font-size:16px> Over-parameterization is ubiquitous nowadays in
+training neural networks to benefit both optimizations
+in seeking global optima and generalization
+in reducing prediction error. We propose a new
+approach based on differential inclusions of inverse
+scale-spaces. Specifically, it generates a
+family of models from simple to complex ones
+that couples a pair of parameters simultaneously
+train over-parameterized deep models and
+structural sparsity on weights of fully connected
+and convolutional layers. Such a differential inclusion
+the scheme has a simple discretization, proposed
+as Deep structurally splitting Linearized
+Bregman Iteration (DessiLBI), whose global convergence
+analysis in deep learning is established
+that from any initializations, algorithmic iterations
+converge to a critical point of empirical risks. Experimental
+evidence shows that DessiLBI achieve
+comparable and even better performance than
+the competitive optimizers in exploring the structural
+the sparsity of several widely used backbones on
+the benchmark datasets. Remarkably, with early
+stopping, DessiLBI unveils “winning tickets” in
+early epochs: the effective sparse structure with
+comparable test accuracy to fully trained overparameterized
+models. </p> 
+</li> 
+</ul>
+</ul>
+<br / >
+<br / >
+  
 <h2>Publications</h2> <p>(*Co-first Author/Alphabetic Order #Corresponding Author)</p>
 <ul>
 <h2>Sparsity Learning and Statistical Inference</h2>
@@ -226,103 +327,6 @@ Bo Zhao, <b>Xinwei Sun</b>, Xiaopeng Hong, Yuan Yao, Yizhou Wang. <br />
 Qianqian Xu, Jiechao Xiong, <b>Xinwei Sun</b>, Zhiyong Yang, Xiaochun Cao, Qingming Huang, Yuan Yao. <br />
 <i>ACM International Conference on Multimedia <b>(ACM-MM)</b>, 2018. </p>
 </li>
-</ul>
-</ul>
-<h2>Research</h2>
-<ul>
-<p style=font-size:20px> 1. Sparsity Learning and Statistical Inference.
-<ul>
-<p style=font-size:18px class="text-left"> (1) Controlling the False Discovery Rate in Transformational Sparsity: Split Knockoffs. <b>(JRSSB)</b>, 2023.</p></a> <br />
-<img src="picture/split_simulation.png" alt="alt text" width="800px" /><br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> Controlling the False Discovery Rate (FDR) in a variable selection procedure is critical for reproducible discoveries, and it has been extensively studied in sparse linear models. However, it remains largely open in scenarios where the sparsity constraint is not directly imposed on the parameters but on a linear transformation of the parameters to be estimated. In this paper, we propose a data-adaptive FDR control method, called the \emph{Split Knockoff} method, for this transformational sparsity setting. The proposed method exploits both variable and data splitting. The linear transformation constraint is relaxed to its Euclidean proximity in a lifted parameter space, which yields an orthogonal design that enables the orthogonal Split Knockoff construction. To overcome the challenge that exchangeability fails due to the heterogeneous noise brought by the transformation, new inverse supermartingale structures are developed via data splitting for provable FDR control without sacrificing power. </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (2) Split Knockoffs for Multiple Comparisons: Controlling the Directional False Discovery Rate. <b>(JASA)</b>, 2023.</p></a> <br />
-<img src="picture/knockoff_sign_procedure.png" alt="alt text" width="800px" /> <br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> Multiple comparisons in hypothesis testing often encounter structural constraints in various applications. We propose an extended Split Knockoff method specifically designed to address the control of directional false discovery rate under linear transformations. Our proposed approach relaxes the stringent linear manifold constraint to its neighborhood, employing a variable splitting technique commonly used in optimization. This methodology yields an orthogonal design that benefits both power and directional false discovery rate control. By incorporating a sample splitting scheme, we achieve effective control of the directional false discovery rate, with a notable reduction to zero as the relaxed neighborhood expands. </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (3) Boosting with Structural Sparsity: A Differential Inclusion Approach. <b>(ACHA)</b>, 2020.</p></a> <br />
-<img src="picture/Split_theory.png" alt="alt text" width="800px" /> <br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> Boosting as gradient descent algorithms is one popular method in machine learning. We propose a novel Boosting-type algorithm based on restricted gradient descent with structural sparsity control whose underlying dynamics are governed by differential inclusions. We present an iterative regularization path with structural sparsity where the parameter is sparse under some linear transforms, based on variable splitting and the Linearized Bregman Iteration. Hence it is called Split LBI. Despite its simplicity, Split LBI outperforms the popular generalized Lasso in both theory and experiments. A theory of path consistency is presented that equipped with a proper early stopping, Split LBI may achieve model selection consistency under a family of Irrepresentable Conditions which can be weaker than the necessary and sufficient condition for generalized Lasso. Furthermore, some 
-\ell_2 error bounds are also given at the minimax optimal rates. </p> 
-</li> 
-</ul>
-<p style=font-size:20px> 2. Causal Inference and Learning. 
-<ul>
-<p style=font-size:18px class="text-left"> (1) Causal Discovery from Subsampled Time Series with Proxy Variables. <b>(NeurIPS)</b>, 2023.</p></a> <br />
-<img src="picture/AD_causal_discovery.png" alt="alt text" width="800px" /><br />
-<br />
-<br />
-<p align="justify" style=font-size:16px>  Inferring causal structures from time series data is the central interest of many scientific inquiries. We propose a constraint-based algorithm that can identify the entire causal structure from subsampled time series, without any parametric constraint. Our observation is that the challenge of subsampling arises mainly from hidden variables at the unobserved time steps. Meanwhile, every hidden variable has an observed proxy, which is essentially itself at some observable time in the future, benefiting from the temporal structure. Based on these, we can leverage the proxies to remove the bias induced by the hidden variables and hence achieve identifiability. Following this intuition, we propose a proxy-based causal discovery algorithm.  </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (2) Which Invariance should we Transfer? A Causal Minimax Learning Approach. <b>(ICML)</b>, 2023.</p></a> <br />
-<img src="picture/causal_minimax.png" alt="alt text" width="800px" /><br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> A major barrier to deploying current machine learning models lies in their non-reliability to dataset shifts. Despite recent advances, a key question remains: which subset of this whole stable information should the model transfer, in order to achieve optimal generalization ability? To answer this question, we present a comprehensive minimax analysis from a causal perspective. Specifically, we first provide a graphical condition for the whole stable set to be optimal. When this condition fails, we surprisingly find with an example that this whole stable set, although can fully exploit stable information, is not the optimal one to transfer. To identify the optimal subset under this case, we propose to estimate the worst-case risk with a novel \emph{optimization} scheme over the intervention functions on mutable causal mechanisms. We then propose an efficient algorithm to search for the subset with minimal worst-case risk, based on a newly defined equivalence relation between stable subsets.   </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:20px> 3. Applications (NeuroImaging and Machine Learning).
-<ul>
-<p style=font-size:18px class="text-left"> (1) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
-<img src="picture/AD_GSplit.png" alt="alt text" width="800px" /> <br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> In voxel-based neuroimage analysis, lesion features have been the main focus in disease prediction due to their interpretability with respect to related diseases. However, we observe that there exists another type of features introduced during the preprocessing steps and we call them “Procedural Bias”. Besides, such bias can be leveraged to improve classification accuracy. Nevertheless, most existing models
-suffer from either under-fit without considering procedural bias or poor interpretability without differentiating such bias from lesion ones. In this
-paper, a novel dual-task algorithm namely GSplit LBI is proposed to
-resolve this problem. By introducing an augmented variable enforced
-to be structural sparsity with a variable splitting term, the estimators
-for prediction and selecting lesion features can be optimized separately
-and mutually monitored by each other following an iterative scheme.
-Empirical experiments have been evaluated on Alzheimer’s Disease
-Neuroimaging Initiative (ADNI) database. </p> 
-</li> 
-</ul> 
-<ul>
-<p style=font-size:18px class="text-left"> (2) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
-<img src="picture/dessilbi.png" alt="alt text" width="800px" /> <br />
-<br />
-<br />
-<p align="justify" style=font-size:16px> Over-parameterization is ubiquitous nowadays in
-training neural networks to benefit both optimizations
-in seeking global optima and generalization
-in reducing prediction error. We propose a new
-approach based on differential inclusions of inverse
-scale-spaces. Specifically, it generates a
-family of models from simple to complex ones
-that couples a pair of parameters simultaneously
-train over-parameterized deep models and
-structural sparsity on weights of fully connected
-and convolutional layers. Such a differential inclusion
-the scheme has a simple discretization, proposed
-as Deep structurally splitting Linearized
-Bregman Iteration (DessiLBI), whose global convergence
-analysis in deep learning is established
-that from any initializations, algorithmic iterations
-converge to a critical point of empirical risks. Experimental
-evidence shows that DessiLBI achieve
-comparable and even better performance than
-the competitive optimizers in exploring the structural
-the sparsity of several widely used backbones on
-the benchmark datasets. Remarkably, with early
-stopping, DessiLBI unveils “winning tickets” in
-early epochs: the effective sparse structure with
-comparable test accuracy to fully trained overparameterized
-models. </p> 
-</li> 
 </ul>
 </ul>
 <div id="footer-text">
