@@ -44,12 +44,16 @@
         <p>Box B</p>
     </div>
 
-    <svg width="200" height="100">
+    <div class="box" id="boxC">
+        <p>Box C</p>
+    </div>
+
+    <svg width="300" height="200">
         <!-- Horizontal Arrow from A to B -->
-        <line x1="0" y1="50" x2="100" y2="50" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="120" y1="80" x2="220" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
 
         <!-- Vertical Arrow from A to C -->
-        <line x1="100" y1="50" x2="100" y2="100" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+        <line x1="170" y1="80" x2="170" y2="160" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
 
         <!-- Arrowhead definition -->
         <defs>
@@ -58,10 +62,6 @@
             </marker>
         </defs>
     </svg>
-
-    <div class="box" id="boxC">
-        <p>Box C</p>
-    </div>
 </body>
   
 <br />
