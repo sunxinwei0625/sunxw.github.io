@@ -234,6 +234,8 @@ Qianqian Xu, Jiechao Xiong, <b>Xinwei Sun</b>, Zhiyong Yang, Xiaochun Cao, Qingm
 <ul>
 <p style=font-size:20px> 1. Sparsity Learning and Statistical Inference.
 <ul>
+<h2> (a) Theory </h2>
+<ul>
 <p style=font-size:18px class="text-left"> (1) Controlling the False Discovery Rate in Transformational Sparsity: Split Knockoffs. <b>(JRSSB)</b>, 2023.</p></a> <br />
 <img src="picture/split_simulation.png" alt="alt text" width="800px" /><br />
 <br />
@@ -270,7 +272,74 @@ Qianqian Xu, Jiechao Xiong, <b>Xinwei Sun</b>, Zhiyong Yang, Xiaochun Cao, Qingm
 \ell_2 error bounds are also given at the minimax optimal rates. </p> 
 </li> 
 </ul>
+<h2> (b) Applications </h2>
+<ul>
+<ul>
+<p style=font-size:18px class="text-left"> (1) GSplit LBI: Taming the Procedural Bias in Neuroimaging for Disease Prediction. <b>(MICCAI)</b>, 2017.</p></a> <br />
+<img src="picture/AD_GSplit.png" alt="alt text" width="800px" /> <br />
 <br />
+<br />
+<p align="justify" style=font-size:16px> In voxel-based neuroimage analysis, lesion features have been the main focus in disease prediction due to their interpretability with respect to related diseases. However, we observe that there exists another type of features introduced during the preprocessing steps and we call them “Procedural Bias”. Besides, such bias can be leveraged to improve classification accuracy. Nevertheless, most existing models
+suffer from either under-fit without considering procedural bias or poor interpretability without differentiating such bias from lesion ones. In this
+paper, a novel dual-task algorithm namely GSplit LBI is proposed to
+resolve this problem. By introducing an augmented variable enforced
+to be structural sparsity with a variable splitting term, the estimators
+for prediction and selecting lesion features can be optimized separately
+and mutually monitored by each other following an iterative scheme.
+Empirical experiments have been evaluated on Alzheimer’s Disease
+Neuroimaging Initiative (ADNI) database. </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (2) FDR-HS: An Empirical Bayesian Identification of Heterogenous Features in Neuroimage Analysis. <b>(MICCAI)</b>, 2018.</p></a> <br />
+<img src="picture/fdrhs_b.png" alt="alt text" width="800px" /> <br />
+<br />
+<p align="justify" style=font-size:16px> Recent studies found that in voxel-based neuroimage analysis,
+detecting and differentiating procedural bias" that is introduced
+during the preprocessing steps from lesion features, not only help
+boost accuracy but also can improve interpretability. To capture both procedural bias and lesion features, we propose
+a two-group" Empirical-Bayes method called FDR-HS (False-
+Discovery-Rate Heterogenous Smoothing). Such a method is able to not
+only avoid multicollinearity but also exploit the heterogenous spatial
+patterns of features. In addition, it enjoys simplicity in implementation
+by introducing hidden variables, which turns the problem into a convex
+optimization scheme and can be solved efficiently by the expectation maximization
+(EM) algorithm.  </p> 
+</li> 
+</ul> 
+<ul>
+<p style=font-size:18px class="text-left"> (3) DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths. <b>(ICML)</b>, 2020.</p></a> <br />
+<img src="picture/dessilbi.png" alt="alt text" width="800px" /> <br />
+<br />
+<p align="justify" style=font-size:16px> Over-parameterization is ubiquitous nowadays in
+training neural networks to benefit both optimizations
+in seeking global optima and generalization
+in reducing prediction error. We propose a new
+approach based on differential inclusions of inverse
+scale-spaces. Specifically, it generates a
+family of models from simple to complex ones
+that couples a pair of parameters simultaneously
+train over-parameterized deep models and
+structural sparsity on weights of fully connected
+and convolutional layers. Such a differential inclusion
+the scheme has a simple discretization, proposed
+as Deep structurally splitting Linearized
+Bregman Iteration (DessiLBI), whose global convergence
+analysis in deep learning is established
+that from any initializations, algorithmic iterations
+converge to a critical point of empirical risks. Experimental
+evidence shows that DessiLBI achieve
+comparable and even better performance than
+the competitive optimizers in exploring the structural
+the sparsity of several widely used backbones on
+the benchmark datasets. Remarkably, with early
+stopping, DessiLBI unveils “winning tickets” in
+early epochs: the effective sparse structure with
+comparable test accuracy to fully trained overparameterized
+models. </p> 
+</li> 
+</ul>
+</ul>
 <p style=font-size:20px> 2. Causal Inference and Learning. 
 <ul>
 <p style=font-size:18px class="text-left"> (1) Causal Discovery from Subsampled Time Series with Proxy Variables. <b>(NeurIPS)</b>, 2023.</p></a> <br />
